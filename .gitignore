@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.pytest_cache/
+build/
+dist/
+
+# A monitor's own data and settings: site coordinates, camera passwords, mail
+sky-monitor-data/
+sky-monitor.toml
+*.fixed.npz
+
+# Windows product build inputs (an ffmpeg download)
+/packaging/ffmpeg/
+
+# Editors and systems
+.DS_Store
+._*
+.idea/
+.vscode/

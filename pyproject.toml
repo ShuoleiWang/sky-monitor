@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sky-monitor"
+version = "0.1.0a1"
+description = "Decides from observatory sky cameras whether the roof may open and imaging may start; serves the answer as ASCOM Alpaca SafetyMonitor devices"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["astronomy", "observatory", "all-sky camera", "cloud detection", "ASCOM", "Alpaca", "safety monitor"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows",
+  "Operating System :: MacOS",
+  "Operating System :: POSIX :: Linux",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Astronomy",
+]
+license = {text = "MIT"}
+authors = [{name = "Shuolei Wang"}]
+dependencies = [
+  "numpy>=2.0",
+  "scipy>=1.14",
+  "pillow>=10",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+dev = ["pytest>=8", "ruff>=0.6"]
+ffmpeg = ["imageio-ffmpeg>=0.5"]
+tray = ["pystray>=0.19"]
+
+[project.urls]
+Homepage = "https://github.com/ShuoleiWang/sky-monitor"
+Issues = "https://github.com/ShuoleiWang/sky-monitor/issues"
+Changelog = "https://github.com/ShuoleiWang/sky-monitor/blob/main/CHANGELOG.md"
+
+[project.scripts]
+sky-monitor = "skymonitor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["skymonitor*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+# The formatter keeps code within the line length; long texts and page markup stay whole.
+# Verdict keeps ``(str, Enum)``: the JSON uses ``.value`` explicitly.
+ignore = ["E501", "UP042"]
+
+[tool.ruff.lint.flake8-bugbear]
+# Frozen dataclasses: safe as default arguments.
+extend-immutable-calls = [
+  "skymonitor.stars.DetectionParams",
+  "skymonitor.analysis.AnalysisParams",
+  "skymonitor.decision.DecisionParams",
+  "skymonitor.synthetic.SkyScene",
+]

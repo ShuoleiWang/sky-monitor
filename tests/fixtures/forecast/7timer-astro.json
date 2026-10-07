@@ -1,0 +1,48 @@
+{
+ "product": "astro",
+ "init": "2026100612",
+ "dataseries": [
+  {
+   "timepoint": 3,
+   "cloudcover": 7,
+   "seeing": 3,
+   "transparency": 8,
+   "lifted_index": 2,
+   "rh2m": 15,
+   "wind10m": {
+    "direction": "S",
+    "speed": 2
+   },
+   "temp2m": 7,
+   "prec_type": "none"
+  },
+  {
+   "timepoint": 6,
+   "cloudcover": 8,
+   "seeing": 3,
+   "transparency": 8,
+   "lifted_index": 2,
+   "rh2m": 15,
+   "wind10m": {
+    "direction": "E",
+    "speed": 2
+   },
+   "temp2m": 9,
+   "prec_type": "none"
+  },
+  {
+   "timepoint": 9,
+   "cloudcover": 9,
+   "seeing": 2,
+   "transparency": 8,
+   "lifted_index": -1,
+   "rh2m": 15,
+   "wind10m": {
+    "direction": "W",
+    "speed": 2
+   },
+   "temp2m": 8,
+   "prec_type": "rain"
+  }
+ ]
+}

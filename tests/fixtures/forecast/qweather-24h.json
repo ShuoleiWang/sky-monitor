@@ -1,0 +1,74 @@
+{
+ "code": "200",
+ "updateTime": "2026-10-07T01:15+08:00",
+ "fxLink": "https://www.qweather.com/weather/example.html",
+ "hourly": [
+  {
+   "fxTime": "2026-10-07T02:00+08:00",
+   "temp": "9",
+   "icon": "151",
+   "text": "多云",
+   "wind360": "225",
+   "windDir": "西南风",
+   "windScale": "1-2",
+   "windSpeed": "9",
+   "humidity": "88",
+   "pop": "20",
+   "precip": "0.0",
+   "pressure": "712",
+   "cloud": "45",
+   "dew": "7"
+  },
+  {
+   "fxTime": "2026-10-07T03:00+08:00",
+   "temp": "8",
+   "icon": "305",
+   "text": "小雨",
+   "wind360": "230",
+   "windDir": "西南风",
+   "windScale": "3",
+   "windSpeed": "13",
+   "humidity": "93",
+   "pop": "55",
+   "precip": "0.3",
+   "pressure": "712",
+   "cloud": "70",
+   "dew": "7"
+  },
+  {
+   "fxTime": "2026-10-07T04:00+08:00",
+   "temp": "8",
+   "icon": "306",
+   "text": "中雨",
+   "wind360": "235",
+   "windDir": "西南风",
+   "windScale": "3",
+   "windSpeed": "18",
+   "humidity": "97",
+   "pop": "",
+   "precip": "1.2",
+   "pressure": "711",
+   "cloud": ""
+  },
+  {
+   "fxTime": "2026-10-07T05:00+08:00",
+   "temp": "7",
+   "icon": "305",
+   "text": "小雨",
+   "wind360": "240",
+   "windDir": "西南风",
+   "windScale": "2",
+   "windSpeed": "11",
+   "humidity": "98",
+   "pop": "80",
+   "precip": "0.8",
+   "pressure": "711",
+   "cloud": "100",
+   "dew": "7"
+  }
+ ],
+ "refer": {
+  "sources": ["QWeather"],
+  "license": ["QWeather Developers License"]
+ }
+}
